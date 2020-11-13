@@ -4,6 +4,7 @@ const WAGE_PER_HOUR = 20;
 
 const randomValue = () =>  Math.floor(Math.random()*10)%2;
 const wageCalculation = (hour, wagePerHour) => hour * wagePerHour;
+
 /**
  *  @description Check whether employee is present or not 
  */
