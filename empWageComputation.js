@@ -39,8 +39,30 @@ var calculateDailyWage = function(randomValue){
     dailyWage = wageCalculation(workingHour, WAGE_PER_HOUR);
     return dailyWage;
 }
+
+/**
+ *  @description Wage calculation using switch statement
+ */
+var calculateDailyWageUsingSwitch = function (randomValue){
+    let dailyWage;
+    switch(randomValue){
+        case FULL_TIME : 
+        workingHour = FULL_DAY_HOUR;
+        break;
+        case PART_TIME : 
+        workingHour = PART_TIME_HOUR;
+        break;
+        default:
+        workingHour = 0;
+    }
+    dailyWage = wageCalculation(workingHour, WAGE_PER_HOUR);
+    return dailyWage;
+}
+
 var randomNum = attendenceCheck();
 var dailyWage = calculateDailyWage(randomNum);
 console.log("Daily wage is : "+dailyWage);
+var dailyWageUsingSwitch = calculateDailyWageUsingSwitch(randomNum);
+console.log("Daily Wage calculated using switch statement is : "+dailyWageUsingSwitch);
 
 
